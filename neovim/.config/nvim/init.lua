@@ -9,7 +9,6 @@ vim.keymap.set({'n', 'v'}, 'x', '"_x')
 
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.clipboard = "unnamedplus"
 vim.opt.scrolloff = 10
 vim.opt.sidescrolloff = 8
 vim.opt.wrap = false
