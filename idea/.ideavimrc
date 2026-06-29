@@ -1,0 +1,16 @@
+let mapleader = " "
+set ignorecase
+set smartcase
+set incsearch
+set scrolloff=5
+set relativenumber
+set guicursor=i:ver25
+set clipboard^=ideaput
+
+nnoremap <Leader>d "_d
+vnoremap <Leader>d "_d
+
+nnoremap <Leader>dd "_dd
+
+nnoremap x "_x
+vnoremap x "_x
