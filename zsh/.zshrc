@@ -34,5 +34,9 @@ alias vim="nvim"
 alias v="nvim"
 
 alias gs="git status"
+alias gfm="git fetch origin master:master"
+alias gmm="git merge master"
+
+alias python="python3"
 
 export PATH="$HOME/.local/bin:$PATH"
