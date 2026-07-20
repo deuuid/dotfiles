@@ -54,6 +54,13 @@ vim.lsp.config.bashls = {
 }
 vim.lsp.enable 'bashls'
 
+vim.lsp.config.ts_ls = {
+  cmd = { 'typescript-language-server', '--stdio' },
+  filetypes = { 'typescript', 'typescriptreact', 'javascript', 'javascriptreact' },
+  root_markers = { 'tsconfig.json', 'package.json', '.git' },
+}
+vim.lsp.enable 'ts_ls'
+
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "text",
   callback = function()
