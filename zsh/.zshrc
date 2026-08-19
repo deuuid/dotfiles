@@ -39,4 +39,7 @@ alias gmm="git merge master"
 
 alias python="python3"
 
+source ~/.aliases_k.sh
+
 export PATH="$HOME/.local/bin:$PATH"
+export XDG_CONFIG_HOME="$HOME/.config"
