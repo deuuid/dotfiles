@@ -14,10 +14,6 @@ on = "<C-p>"
 run = "shell -- qlmanage -p %s"
 
 [[mgr.prepend_keymap]]
-on  = "y"
-run = [ "yank", 'plugin clipboard -- --action=copy' ]
-
-[[mgr.prepend_keymap]]
 on  = "<C-p>"
 run = [ 'plugin clipboard -- --action=paste' ]
 
