@@ -1,0 +1,4 @@
+# No restore windows after shutdown/reboot
+
+defaults write -g ApplePersistence -bool no 
+defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
