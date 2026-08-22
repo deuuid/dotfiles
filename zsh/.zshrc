@@ -29,6 +29,7 @@ alias b="btop"
 alias cat="bat -n -A"
 alias clip="pbcopy"
 alias g="git"
+alias reboot="sudo shutdown -r now"
 
 alias vim="nvim"
 alias v="nvim"
