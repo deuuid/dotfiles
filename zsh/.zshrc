@@ -26,7 +26,6 @@ alias y="yazi"
 alias d="kitten diff"
 alias ff="fastfetch"
 alias b="btop"
-alias cat="bat -n -A"
 alias clip="pbcopy"
 alias g="git"
 alias reboot="sudo shutdown -r now"
@@ -44,3 +43,5 @@ source ~/.aliases_k.sh
 
 export PATH="$HOME/.local/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
+
+eval "$(zoxide init zsh)"
