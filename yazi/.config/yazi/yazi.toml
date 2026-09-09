@@ -1,3 +1,8 @@
 [mgr]
 show_hidden = false
 
+[opener]
+zip_unzip = [
+	{ run = 'unzip "$1" -d "${1%.zip}"', block = true, for = "unix", desc = "Extract to folder" }
+]
+
