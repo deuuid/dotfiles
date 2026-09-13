@@ -61,8 +61,8 @@ on-mode-changed = []
     alt-quote = 'exec-and-forget open -a kitty'
     alt-semicolon = 'exec-and-forget kitten quick-access-terminal ~'
 
-    alt-t = 'exec-and-forget /bin/bash -c "NAME=todo /Users/deshu/.config/sketchybar/plugins/todo_popover_toggle.sh"'
-    alt-c = 'exec-and-forget /Users/deshu/.config/sketchybar/plugins/calendar_popover_toggle.sh'
+    alt-t = 'exec-and-forget $HOME/.config/aerospace/scripts/todo.sh'
+    alt-c = 'exec-and-forget $HOME/.config/aerospace/scripts/calendar.sh'
 
     alt-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
     alt-shift-2 = ['move-node-to-workspace 2', 'workspace 2']
