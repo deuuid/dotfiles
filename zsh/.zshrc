@@ -37,6 +37,7 @@ alias gs="git status"
 alias gfm="git fetch origin master:master"
 alias gmm="git merge master"
 
+alias matrix="cmatrix -C blue -s"
 alias python="python3"
 
 source ~/.aliases_k.sh
