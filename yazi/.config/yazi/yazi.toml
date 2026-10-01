@@ -3,6 +3,26 @@ show_hidden = false
 
 [opener]
 zip_unzip = [
-	{ run = 'unzip "$1" -d "${1%.zip}"', block = true, for = "unix", desc = "Extract to folder" }
+	{ run = 'f=%s1; unzip "$f" -d "$(dirname "$f")/$(basename "$f" .zip)"', block = true, for = "unix", desc = "Extract to folder" }
+]
+neovide = [
+	{ run = 'open -a Neovide %s', for = "macos", desc = "Neovide" }
+]
+libreoffice = [
+	{ run = 'open -a LibreOffice %s', for = "macos", desc = "LibreOffice" }
 ]
 
+[open]
+prepend_rules = [
+	{ url = "*.csv", use = [ "libreoffice", "edit", "neovide", "reveal" ] },
+	{ url = "*.zip", use = [ "extract", "zip_unzip", "reveal" ] },
+	{ mime = "text/*", use = [ "edit", "neovide", "reveal" ] },
+	{ mime = "application/{json,ndjson}", use = [ "edit", "neovide", "reveal" ] },
+]
+
+[plugin]
+prepend_previewers = [
+	{ url = "*.csv", run = 'piper -- if iconv -f utf-8 -t utf-8 "$1" >/dev/null 2>&1; then cat "$1"; else iconv -f cp1251 -t utf-8 "$1"; fi' },
+	{ mime = "text/*", run = 'piper -- if iconv -f utf-8 -t utf-8 "$1" >/dev/null 2>&1; then cat "$1"; else iconv -f cp1251 -t utf-8 "$1"; fi' },
+	{ mime = "application/{json,ndjson,javascript}", run = 'piper -- if iconv -f utf-8 -t utf-8 "$1" >/dev/null 2>&1; then cat "$1"; else iconv -f cp1251 -t utf-8 "$1"; fi' },
+]

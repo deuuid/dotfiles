@@ -8,5 +8,10 @@ use = "Ape/smart-enter"
 rev = "1c835cc"
 hash = "d6d6fa001c2cda9dda6eb5bc6beb96b7"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:piper"
+rev = "33dde28"
+hash = "d1e0499cae5f3aeb628c267616d4b682"
+
 [flavor]
 deps = []
