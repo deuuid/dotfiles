@@ -128,7 +128,7 @@ sketchybar --add item xray right \
   --set xray \
     drawing=on \
     icon.drawing=off \
-    label="XR" \
+    label="SB" \
     update_freq=5 \
     script="$PLUGIN_DIR/xray.sh"
 
