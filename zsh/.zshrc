@@ -40,6 +40,8 @@ alias gmm="git merge master"
 alias matrix="cmatrix -C blue -s"
 alias python="python3"
 
+source ~/.config/proxy/cloda.sh
+
 source ~/.aliases_k.sh
 
 export PATH="$HOME/.local/bin:$PATH"
