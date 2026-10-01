@@ -2,6 +2,7 @@ require("vim._core.ui2").enable()
 
 require("plugins")
 require("options")
+require("neovide")
 require("keymaps")
 require("autocmds")
 

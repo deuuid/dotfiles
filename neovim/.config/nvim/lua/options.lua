@@ -27,5 +27,7 @@ opt.timeoutlen = 400
 opt.termguicolors = true
 opt.signcolumn = "yes"
 opt.showmatch = true
+opt.fillchars = { eob = " " }
+opt.shortmess:append("I")
 
 opt.fileencodings = { "ucs-bom", "utf-8", "cp1251", "latin1" }
