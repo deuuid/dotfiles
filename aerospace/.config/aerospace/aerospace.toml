@@ -63,6 +63,7 @@ on-mode-changed = []
 
     alt-t = 'exec-and-forget $HOME/.config/aerospace/scripts/todo.sh'
     alt-c = 'exec-and-forget $HOME/.config/aerospace/scripts/calendar.sh'
+    alt-w = 'exec-and-forget $HOME/.config/aerospace/scripts/windows_killer.sh'
 
     alt-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
     alt-shift-2 = ['move-node-to-workspace 2', 'workspace 2']

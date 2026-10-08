@@ -110,13 +110,6 @@ sketchybar --add item headphones right \
     update_freq=5 \
     script="$PLUGIN_DIR/headphones.sh"
 
-sketchybar --add item amneziawg right \
-  --set amneziawg \
-    icon="AZ" \
-    label.drawing=off \
-    update_freq=5 \
-    script="$PLUGIN_DIR/amneziawg.sh"
-
 sketchybar --add item openvpn right \
   --set openvpn \
     icon="OV" \
@@ -130,7 +123,7 @@ sketchybar --add item xray right \
     icon.drawing=off \
     label="SB" \
     update_freq=5 \
-    script="$PLUGIN_DIR/xray.sh"
+    script="$PLUGIN_DIR/sb.sh"
 
 sketchybar --add item claude right \
   --set claude \
