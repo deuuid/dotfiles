@@ -22,7 +22,6 @@ alias c="clear"
 alias l="ls -al -h"
 alias zc="nvim ~/.zshrc"
 alias zs="source ~/.zshrc"
-alias y="yazi"
 alias d="kitten diff"
 alias ff="fastfetch"
 alias b="btop"
@@ -48,3 +47,12 @@ export PATH="$HOME/.local/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
 
 eval "$(zoxide init zsh)"
+
+# yazi: cd into the last directory on quit
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
