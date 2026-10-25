@@ -10,10 +10,12 @@ run  = 'shell "$SHELL" --block'
 desc = "Open $SHELL here"
 
 [[mgr.prepend_keymap]]
-on = "<C-p>"
-run = "shell -- qlmanage -p %s"
+on   = "<C-p>"
+run  = "shell -- qlmanage -p %s"
+desc = "Quick Look"
 
 [[mgr.prepend_keymap]]
-on  = "<C-p>"
-run = [ 'plugin clipboard -- --action=paste' ]
+on   = "<C-v>"
+run  = 'plugin clipboard -- --action=paste'
+desc = "Paste from system clipboard"
 

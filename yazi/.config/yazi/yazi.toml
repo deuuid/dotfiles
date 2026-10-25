@@ -1,5 +1,10 @@
 [mgr]
-show_hidden = false
+show_hidden    = false
+sort_by        = "natural"
+sort_dir_first = true
+linemode       = "size"
+show_symlink   = true
+scrolloff      = 5
 
 [opener]
 zip_unzip = [
@@ -22,7 +27,6 @@ prepend_rules = [
 
 [plugin]
 prepend_previewers = [
-	{ url = "*.csv", run = 'piper -- if iconv -f utf-8 -t utf-8 "$1" >/dev/null 2>&1; then cat "$1"; else iconv -f cp1251 -t utf-8 "$1"; fi' },
-	{ mime = "text/*", run = 'piper -- if iconv -f utf-8 -t utf-8 "$1" >/dev/null 2>&1; then cat "$1"; else iconv -f cp1251 -t utf-8 "$1"; fi' },
-	{ mime = "application/{json,ndjson,javascript}", run = 'piper -- if iconv -f utf-8 -t utf-8 "$1" >/dev/null 2>&1; then cat "$1"; else iconv -f cp1251 -t utf-8 "$1"; fi' },
+	{ url = "*.csv", run = 'piper -- if iconv -f utf-8 -t utf-8 "$1" >/dev/null 2>&1; then cat "$1"; else iconv -f cp1251 -t utf-8 "$1"; fi | bat -p --color=always --file-name "$1"' },
+	{ url = "*.md",  run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"' },
 ]
